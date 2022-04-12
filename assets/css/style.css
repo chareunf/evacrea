@@ -1,0 +1,400 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*mi contenido se va ajustar siempre que espesifique un ancho y alto determinado*/
+}
+
+body {
+    background-color: rgb(243, 243, 179);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+.Principal,
+.contacto,
+.novedades,
+.peluches,
+.quiensoy {
+    width: 85%;
+    min-height: 100%;
+    margin: 20px auto;
+}
+
+.Principal {
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    grid-template-areas: "header header header"
+        "conteiner   img1   img2"
+        "conteiner   img3   img4"
+        "footer footer footer";
+
+
+
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px black solid;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+
+}
+
+.header__logo {
+    text-decoration: none;
+    padding: 20px;
+    margin-left: 10px;
+    font-size: 2em;
+}
+
+li a {
+    text-decoration: none;
+
+}
+
+.header__nav__items {
+    list-style: none;
+}
+
+.header__nav__items li {
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    
+}
+
+.header__nav__items li:hover {
+
+    border-radius: 15px;
+    box-shadow: 4px 4px 7px gray;
+    transition: 0.5s;
+
+
+
+}
+
+.AllMain {
+    grid-area: conteiner;
+
+    background-image: url(./../img/fotoevacrea\ 1png.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.AllMain h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 4px 4px 1px beige;
+}
+
+.AllMain p {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-shadow: 2px 2px 2px beige;
+}
+
+
+.ImgPrincipal {
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.ImgPrincipal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid gray;
+    border-radius: 4px;
+    box-shadow: 8px 8px 10px gray;
+}
+
+#Img1 {
+    grid-area: img1;
+}
+
+#Img2 {
+    grid-area: img2
+}
+
+#Img3 {
+    grid-area: img3
+}
+
+#Img4 {
+    grid-area: img4
+}
+
+
+
+footer {
+    grid-area: footer;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 40px;
+}
+
+@media screen and (max-width: 1035px) {
+    .Principal {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "header header header header"
+            "conteiner conteiner conteiner conteiner"
+            "img1 img1 img2 img2"
+            "img3 img3 img4 img4"
+            "footer footer footer footer";
+    }
+
+}
+
+@media screen and (max-width: 875px) {
+    .Principal {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "header header header header"
+            "conteiner conteiner conteiner conteiner"
+            "img1 img1 img1 img1"
+            "img2 img2 img2 img2"
+            "img3 img3 img3 img3"
+            "img4 img4 img4 img4"
+            "footer footer footer footer";
+    }
+
+    .Principal header {
+        flex-direction: column;
+    }
+
+    .ImgPrincipal img {
+        width: 80%;
+        max-height: auto;
+
+    }
+
+    .ImgPrincipal {
+        margin-left: 0px;
+    }
+}
+
+/*Aqui comienza la seccion de Quien soy?*/
+
+.quiensoy {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "header header"
+        "Section1  Section2"
+        "footer footer";
+}
+
+.Section1 {
+    grid-area: Section1;
+    text-align: justify;
+}
+
+.Section1 p {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+
+}
+
+.Section1 h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Section2 {
+    grid-area: Section2;
+
+}
+
+.Section2 img {
+    width: 90%;
+}
+
+@media screen and (max-width: 1035px) {
+    .quiensoy {
+
+
+        grid-template-areas:
+            "header header"
+            "Section2  Section2"
+            "Section1  Section1"
+            "footer footer";
+    }
+
+    .Section2 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .quiensoy {
+
+
+        grid-template-areas:
+            "header header"
+            "Section2  Section2"
+            "Section1  Section1"
+            "footer footer";
+    }
+
+    .quiensoy header {
+        flex-direction: column;
+    }
+}
+
+/*body {
+    background-color: rgb(243, 243, 179);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+header {
+    grid-area: header;
+    background-color: rgb(255, 255, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto 15px;
+
+}
+
+header div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px black solid;
+}
+
+.header__logo {
+    text-decoration: none;
+    padding: 20px;
+    margin-left: 65px;
+    font-size: x-large;
+
+
+}
+
+
+li a {
+    text-decoration: none;
+
+}
+
+.header__nav__items {
+    list-style: none;
+}
+
+.header__nav__items li {
+    display: inline-block;
+    padding: 20px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.header__nav__items li:hover {
+    background-color: rgb(243, 243, 179);
+    border-radius: 15px;
+}
+
+.AllMain {
+    grid-area: main;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    height: 600px;
+    display: flex;
+
+
+
+}
+
+.AllMain div {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+
+.AllMain div img {
+    height: 40%;
+    width: 35%;
+    object-fit: cover;
+    border: 2px solid gray;
+    border-radius: 4px;
+
+
+
+}
+
+.AllMain section {
+    width: 40%;
+    background-image: url(./../img/fotoevacrea\ 1png.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.AllMain section h1 {
+    padding-bottom: 20px;
+}
+
+.AllMain section p {
+    padding-top: 20px;
+    word-spacing: 3px;
+    text-align: justify;
+    margin: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(255, 255, 226);
+    display: flex;
+    justify-content: center;
+}
+
+footer div ul li {
+    display: inline-block;
+    padding: 40px;
+}
+
+footer div {
+    width: 90%;
+    border-top: 2px black solid;
+    display: flex;
+    justify-content: center;
+
+}*/
