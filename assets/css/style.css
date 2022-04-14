@@ -6,6 +6,7 @@
 }
 
 body {
+    background-image: linear-gradient(to left top, rgb(126, 238, 126), rgb(253, 242, 124)  );
     background-color: rgb(243, 243, 179);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
@@ -53,6 +54,18 @@ header {
     padding: 20px;
     margin-left: 10px;
     font-size: 2em;
+    transition: 1.5s ease;
+    animation-name: logoanimado;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    position: relative;
+}
+  
+@keyframes logoanimado{
+    0% {color: none;}
+    50% {color: aquamarine;}
+    100%{color: none;}
+
 }
 
 li a {
@@ -76,9 +89,7 @@ li a {
     border-radius: 15px;
     box-shadow: 4px 4px 7px gray;
     transition: 0.5s;
-
-
-
+    
 }
 
 .AllMain {
@@ -124,21 +135,27 @@ li a {
     border-radius: 4px;
     box-shadow: 8px 8px 10px gray;
 }
+.ImgPrincipal img:hover{
+    transform: scale(1.2);
+      }
 
 #Img1 {
     grid-area: img1;
 }
 
 #Img2 {
-    grid-area: img2
+    grid-area: img2;
+      transform: rotate(-7deg);
+     /* position: relative;*/
+      
 }
 
 #Img3 {
-    grid-area: img3
+    grid-area: img3;
 }
 
 #Img4 {
-    grid-area: img4
+    grid-area: img4;
 }
 
 
@@ -263,138 +280,8 @@ footer ul li {
             "footer footer";
     }
 
-    .quiensoy header {
+     header {
         flex-direction: column;
     }
 }
 
-/*body {
-    background-color: rgb(243, 243, 179);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-
-header {
-    grid-area: header;
-    background-color: rgb(255, 255, 226);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: auto 15px;
-
-}
-
-header div {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px black solid;
-}
-
-.header__logo {
-    text-decoration: none;
-    padding: 20px;
-    margin-left: 65px;
-    font-size: x-large;
-
-
-}
-
-
-li a {
-    text-decoration: none;
-
-}
-
-.header__nav__items {
-    list-style: none;
-}
-
-.header__nav__items li {
-    display: inline-block;
-    padding: 20px;
-    margin-right: 35px;
-    cursor: pointer;
-}
-
-.header__nav__items li:hover {
-    background-color: rgb(243, 243, 179);
-    border-radius: 15px;
-}
-
-.AllMain {
-    grid-area: main;
-    
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-    height: 600px;
-    display: flex;
-
-
-
-}
-
-.AllMain div {
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-
-}
-
-.AllMain div img {
-    height: 40%;
-    width: 35%;
-    object-fit: cover;
-    border: 2px solid gray;
-    border-radius: 4px;
-
-
-
-}
-
-.AllMain section {
-    width: 40%;
-    background-image: url(./../img/fotoevacrea\ 1png.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin-left: 20px;
-    text-align: center;
-    padding-top: 30px;
-}
-
-.AllMain section h1 {
-    padding-bottom: 20px;
-}
-
-.AllMain section p {
-    padding-top: 20px;
-    word-spacing: 3px;
-    text-align: justify;
-    margin: 20px;
-}
-
-footer {
-    grid-area: footer;
-    background-color: rgb(255, 255, 226);
-    display: flex;
-    justify-content: center;
-}
-
-footer div ul li {
-    display: inline-block;
-    padding: 40px;
-}
-
-footer div {
-    width: 90%;
-    border-top: 2px black solid;
-    display: flex;
-    justify-content: center;
-
-}*/
