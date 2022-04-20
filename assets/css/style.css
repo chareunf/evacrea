@@ -267,6 +267,10 @@ footer ul li {
         display: flex;
         justify-content: center;
     }
+
+    header {
+        flex-direction: column;
+}
 }
 
 @media screen and (max-width: 875px) {
@@ -285,3 +289,8 @@ footer ul li {
     }
 }
 
+/*css de bootstrap*/
+#galeria img{
+width: 100%;
+height: 20rem;
+}

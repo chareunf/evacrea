@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Contacto</title>
 </head>
 
 <body>
+
+
     <div class="contacto">
         <header>
             <div>
@@ -37,7 +40,56 @@
 
         </header>
 
-        <main>
+        <main class="conteiner row ">
+
+            <div class="col-xxl-8">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" required name="apellido">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required name="nombre">
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="micorreo@micorreo.com">
+                    </div>
+
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" placeholder="Escribe tu mensaje aqui"
+                            rows="3"></textarea>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="newslatter">
+                            <label class="form-check-label" for="newslatter">
+                                Recibir Novedades
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <input type="reset" class="btn btn-primary" id="botonlimpiar" value="Limpiar campos">
+                        <input type="submit" class="btn btn-primary" id="enviodedatos" value="Enviar">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="col-xxl-4 text-center p-5">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26289.133609619283!2d-58.580314817823265!3d-34.5499674502807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9f880d30623%3A0xf63bd5e2b5393d70!2sVilla%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1647713885250!5m2!1ses!2sar"
+                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </main>
+
+
+        <!-- <main>
             <h1>Contactanos</h1>
             <form action="">
 
@@ -98,7 +150,7 @@
                     width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
-        </main>
+        </main>-->
 
         <footer>
 
@@ -124,6 +176,7 @@
 
         </footer>
     </div>
+    <script src="./../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
