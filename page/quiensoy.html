@@ -5,13 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>quiensoy</title>
 </head>
 
 <body>
     <div class="quiensoy">
-        <header>
+
+        <header class="container-fluid navbar navbar-expand-lg navbar-light  border-bottom border-2 border-dark mb-3 p-3 ">
+            <nav>
+                <!--<a class="navbar-brand fs-1" href="index.html">EvaCrea</a>-->
+                <a href="./../index.html" class="header__logo">EvaCreaArte</a>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav resaltadoBoton">
+                    <a class="nav-link active text-primary" href="./../index.html">Inicio</a>
+                    <a class="nav-link text-success" href="./quiensoy.html">¿Quien soy?</a>
+                    <a class="nav-link text-success" href="./peluches.html">Peluches</a>
+                    <a class="nav-link text-success" href="./novedades.html">Novedades</a>
+                    <a class="nav-link text-success" href="./contacto.html">Contacto</a>
+                </div>
+            </div>
+
+        </header>
+
+        <!--<header>
             <div>
                 <a href="./../index.html" class="header__logo">EvaCreaArte</a>
             </div>
@@ -35,7 +58,7 @@
                 </ul>
             </nav>
 
-        </header>
+        </header>-->
 
         <main class="Section1">
 
@@ -93,6 +116,8 @@
 
         </footer>
     </div>
+
+    <script src="./../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

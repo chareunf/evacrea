@@ -20,7 +20,7 @@ body {
 .quiensoy {
     width: 85%;
     min-height: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
 }
 
 .Principal {
@@ -91,6 +91,7 @@ li a {
     transition: 0.5s;
     
 }
+
 
 .AllMain {
     grid-area: conteiner;
@@ -294,3 +295,12 @@ footer ul li {
 width: 100%;
 height: 20rem;
 }
+.resaltadoBoton a{
+    font-size: 1.1rem;
+    
+ }
+ .resaltadoBoton a:hover{
+     border-radius: 15px;
+     box-shadow: 4px 4px 7px gray;
+     transition: 1s;
+ }
