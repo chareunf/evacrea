@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mapas';
 
 * {
     margin: 0px;
@@ -7,28 +8,34 @@
     /*mi contenido se va ajustar siempre que espesifique un ancho y alto determinado*/
 }
 
-
+@import 'mixin';
 
 body {
-    background-image: $gradiente-background ;
+    background-image: $gradiente-background;
     background-color: rgb(243, 243, 179);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     height: 100%;
 }
 
-.Principal,
-.contacto,
-.novedades,
-.peluches,
-.quiensoy {
+
+.contacto{
     width: 85%;
     min-height: 100%;
     margin: 0px auto;
 }
+.novedades{
+    @extend .contacto;
+}
+.peluches{
+    @extend .contacto;
+}
+.quiensoy{
+    @extend .contacto;
+}
 
 .Principal {
-
+@extend .contacto;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 2fr 1fr 1fr;
@@ -37,7 +44,6 @@ body {
         "conteiner   img1   img2"
         "conteiner   img3   img4"
         "footer footer footer";
-
 
 
 }
@@ -107,6 +113,7 @@ li a {
 }
 
 
+
 .AllMain {
     grid-area: conteiner;
 
@@ -117,7 +124,7 @@ li a {
 
 
 
-    h1 {
+    /*h1 {
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: center;
@@ -130,7 +137,7 @@ li a {
         margin-bottom: 10px;
         text-align: justify;
         text-shadow: 2px 2px 2px beige;
-    }
+    }*/
 }
 
 
@@ -183,12 +190,22 @@ footer {
     border-top: 2px solid black;
     display: flex;
     justify-content: center;
-
+    padding: 20px 0px 20px 0px;
 
 
     ul li {
         display: inline-block;
-        padding: 40px;
+        padding: 20px;
+    }
+}
+
+/*incorporando sass*/
+@each $red,$color in $border-redes {
+    .bordesFooterRedes--#{$red} {
+        border-right: 3px solid white;
+        background-color: $color;
+        border-radius: 10px;
+
     }
 }
 
@@ -244,37 +261,39 @@ footer {
         "header header"
         "Section1  Section2"
         "footer footer";
-}
 
-.Section1 {
-    grid-area: Section1;
-    text-align: justify;
+    .Section1 {
+        grid-area: Section1;
+        text-align: justify;
 
 
-    p {
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-bottom: 10px;
+        p {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 10px;
 
+        }
+
+        h1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
     }
 
-    h1 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        text-align: center;
+
+
+
+    .Section2 {
+        grid-area: Section2;
+
+        img {
+            width: 90%;
+        }
     }
 }
 
 
-
-
-.Section2 {
-    grid-area: Section2;
-
-    img {
-        width: 90%;
-    }
-}
 
 @media screen and (max-width: 1035px) {
     .quiensoy {

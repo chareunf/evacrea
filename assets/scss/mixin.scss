@@ -1,0 +1,12 @@
+@mixin fontAllMain($margin, $text-align,$text-shadow) {
+    
+    margin: $margin;
+    text-align: $text-align;
+    text-shadow: $text-shadow;
+}
+.styleFontH1{
+    @include fontAllMain(20px 0px 20px 0px,center,4px 4px 1px beige)
+}
+.styleFontP{
+    @include fontAllMain(0px 30px 10px 30px, justify, 2px 2px 2px beige)
+}

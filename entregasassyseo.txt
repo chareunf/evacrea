@@ -1,0 +1,4 @@
+el mixin esta en su propia file mixin.scss arrobada en style.scss en la fila 11 y aplicado en la fila tanto en el index como en pagina quien soy
+el extend este en la hoja style.scss linea 27
+el mapa este en file mapas.scss y aplicado en style.scss en linea 202
+seo esta aplicado en todas las paginas y el index
