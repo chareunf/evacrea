@@ -76,24 +76,9 @@ li a {
 
 .AllMain {
   grid-area: conteiner;
-  /*background-image: url(./../img/fotoevacrea\ 1png.png);*/
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  /*h1 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-        text-shadow: 4px 4px 1px beige;
-    }
-
-    p {
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-bottom: 10px;
-        text-align: justify;
-        text-shadow: 2px 2px 2px beige;
-    }*/ }
+  background-size: cover; }
 
 .ImgPrincipal {
   margin-left: 20px;
@@ -116,8 +101,7 @@ li a {
 
 #Img2 {
   grid-area: img2;
-  transform: rotate(-7deg);
-  /* position: relative;*/ }
+  transform: rotate(-7deg); }
 
 #Img3 {
   grid-area: img3; }
