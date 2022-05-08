@@ -15,7 +15,7 @@
   text-shadow: 2px 2px 2px beige; }
 
 body {
-  background-image: linear-gradient(to left top, #7eee7e, #fdf27c);
+  background-image: linear-gradient(to left top, white, #fdf27c);
   background-color: #f3f3b3;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
